@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профессиональная студия лазерной эпиляции "Гладко"</title>
+  
+  <style>
+    body {
+      background-color: #696969;
+      color: #3a391a;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .header {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-bottom: 3px solid #e0e0e0;
+    }
+    
+    h1, h2 {
+      color: #2c3e50;
+    }
+    
+    h1 {
+      text-align: center;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin: 30px 0 20px;
+    }
+    
+    .nav {
+      margin-top: 20px;
+    }
+    
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    .nav a:hover {
+      background-color: #3498db;
+      color: white;
+    }
+    
+    .main-content {
+      padding: 20px;
+    }
+    
+    .class1 {
+      font-family: "Oswald", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    .scale {
+      width: 400px;
+      transition: transform 0.5s ease;
+    }
+    
+    .scale:hover {
+      transform: scale(1.1);
+    }
+    
+    .images-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .images-row img {
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .images-row img:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* FAQ стили */
+    .faq-section {
+      margin-top: 30px;
+    }
+    
+    .faq-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .faq-list li {
+      background-color: #e8f4fc;
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #3498db;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-list li:hover {
+      transform: translateX(5px);
+      background-color: #e6f7ff;
+    }
+    
+    .faq-question {
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .faq-answer {
+      color: #333;
+      line-height: 1.5;
+    }
+    
+    .faq-answer p {
+      margin: 5px 0;
+    }
+    
+    /* Футер стили */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 30px 20px 20px;
+      margin-top: 40px;
+      border-top: 3px solid #e0e0e0;
+    }
+    
+    .social-block {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .social-text {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .socials a {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .socials a:hover {
+      transform: translateY(-5px);
+    }
+    
+    .socials img {
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+    
+    .socials img:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .contacts {
+      text-align: center;
+      margin: 25px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .contacts p {
+      margin: 8px 0;
+      color: #555;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .images-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .socials {
+        gap: 10px;
+      }
+      
+      .socials img {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .scale {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    
+    /* Большая фоновая гифка */
+    #bigGif {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    
+    /* Центрирование текста */
+    .center-text {
+      text-align: center;
+    }
+    
+    /* Выделение важного текста */
+    .highlight {
+      background-color: #fffacd;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Фоновая гифка -->
+  <img id="bigGif" src="https://images.steamusercontent.com/ugc/53587313652234975/9A0874E0D5FD0C9DC72CCB7031EF1580F6464076/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Фоновое изображение">
+
+  <div class="container">
+    <header class="header">
+      <h1 class="class1" style="text-align: left;">
+        <img src="images\Без названия92_20251215170727.png" 
+             alt="Логотип студии Гладко" 
+             width="200" 
+             height="40"
+             style="vertical-align: middle; margin-right: 10px;">
+        Профессиональная студия лазерной эпиляции
+      </h1>
+      
+      <nav class="nav">
+        <ul>
+          <li><a href="#usl">Услуги</a></li>
+          <li><a href="#obo">Оборудование</a></li>
+          <li><a href="#rez">Результат</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+          <li><a href="#consl">Получить консультацию</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="main-content">
+      <section>
+        <article id="rez"></article>
+        <h1>Ищите студию лазерной эпиляции с грамотными специалистами? Тогда вам к нам!</h1>
+        
+        <p class="class1 center-text">
+          Студия <em><strong>«Гладко»</strong></em> - это <em>профессиональная</em> косметологическая студия, 
+          которая занимается лазерной эпиляцией. У нас есть новейшее оборудование, квалифицированный персонал и все нужные сертификаты. 
+          Наши клиенты неизменно остаются довольны результатом!
+        </p>
+        
+        <img src="images/Снимок экрана (693).png"
+             alt="Результат лазерной эпиляции"
+             class="scale"
+             style="display: block; margin: 20px auto; width: 700px; height: 500px; max-width: 100%;">
+        
+        <article id="obo"></article>
+        <h1>У нас имеется современное высококачественное оборудование, которое подарит вам идеально гладкую кожу за несколько сеансов!</h1>
+        
+        <div class="images-row">
+          <img src="images/Снимок экрана (700).png"
+               alt="Лазерное оборудование 1"
+               class="scale"
+               width="400"
+               height="400">
+          
+          <img src="images/Снимок экрана 1(700).png"
+               alt="Лазерное оборудование 2"
+               class="scale"
+               width="400"
+               height="400">
+          
+        
+        </div>
+        
+        <article id="usl"></article>
+        <h1>У нас есть выгодное предложение на любой вкус!</h1>
+        
+        <div class="images-row">
+          <img src="images/Без названия104_20251224150437.png"
+               alt="Услуга 1"
+               class="scale"
+               width="400"
+               height="400">
+          
+          <img src="images/Без названия104_20251224150443.png"
+               alt="Услуга 2"
+               class="scale"
+               width="400"
+               height="400">
+        </div>
+        
+        <h1>У нас есть все необходимые сертификаты!</h1>
+        
+        <div class="images-row">
+          <img src="images/Сертификат студии лазерной эпиляции.jpg"
+               alt="Сертификат 1"
+               class="scale"
+               width="400"
+               height="400">
+          
+          <img src="images/Сертификат 2.jpg"
+               alt="Сертификат 2"
+               class="scale"
+               width="400"
+               height="400">
+        </div>
+        
+        <article id="faq"></article>
+        <h1>Часто задаваемые вопросы</h1>
+        
+        <div class="faq-section">
+          <ul class="faq-list">
+            <li>
+              <span class="faq-question">Какие есть противопоказания к лазерной эпиляции?</span>
+              <div class="faq-answer">
+                <p>Существуют временные и постоянные противопоказания.</p>
+                <p><strong>К временным относят:</strong> Возраст до 16 лет. Если вам 16, то потребуется официальное разрешение родителей. Мы не рекомендуем делать ЛЭ в раннем возрасте, так как организм еще формируется. Беременность. После 6 месяцев лактации ограничение снимается. Свежий загар. Солнечные лучи травмируют кожу и на восстановление ей необходимо около двух недель. Биоэпиляция. С момента удаления волос сахарной пастой/воском должно пройти 30 дней. Потому как при этих процедурах вырываются корни, и лазерная эпиляция будет попросту неэффективна.</p>
+                <p><strong>Постоянные противопоказания:</strong> онкологические патологии, хронические заболевания кожи, сахарный диабет (декомпенсированная стадия), аллергия на свет, витилиго в семейном анамнезе.</p>
+                <p>Если у вас индивидуальный случай, то необходимо получить разрешение от врача.</p>
+              </div>
+            </li>
+            
+            <li>
+              <span class="faq-question">Говорят лазерная эпиляция опасна, так ли это?</span>
+              <div class="faq-answer">
+                <p>Уже давно доказана безопасность этой процедуры. Лазер не проникает глубже 4 мм и соответственно никак не может дойти глубже слоев кожи.</p>
+                <p>Помимо этого, мы неоднократно брали интервью у врачей с разных ниш, чтобы еще раз убрать все ваши сомнения.</p>
+              </div>
+            </li>
+            
+            <li>
+              <span class="faq-question">Почему после 4-5 процедуры может возобновиться рост волос?</span>
+              <div class="faq-answer">
+                <p>На каждой процедуре лазер воздействует на фолликул, который находится в стадии активного роста. Удаление волоса на этой стадии отрезает источник питания и помогает разрушить оболочку фолликула. Однако, одновременно на нашем теле активны не все волосяные фолликулы.</p>
+                <p>После уничтожения одного, просыпаются другие луковицы. Они начинают расти с нуля и волоски появляются вновь. Поэтому не переживайте, если после 4-5 процедур, вы увидели много волос. Это значит, что активировались спящие волоски! А те волосы, которые уже выпали больше не вырастут.</p>
+                <p>Но! Не стоит забывать, что нужно пройти полный курс процедур, чтобы воздействовать на больший процент волосяных фолликулов! Именно поэтому мы делаем процедуры курсом от 8-12 процедур в среднем.</p>
+              </div>
+            </li>
+            
+            <li>
+              <span class="faq-question">Как записаться на прием?</span>
+              <div class="faq-answer">
+                <p>Вы можете связаться с нами по телефону или электронной почте, либо написать в личные сообщения в инстаграмм, телеграмм или вацап.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <article id="consl"></article>
+        <h1>Получить консультацию</h1>
+        <p class="center-text">Для записи на консультацию свяжитесь с нами любым удобным способом, указанным внизу страницы.</p>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="social-block">
+        <span class="social-text">Наши соц. сети:</span>
+        <div class="socials">
+          <a href="https://play.google.com/store/apps/details?id=com.vkontakte.android&hl=ru"><img src="https://play-lh.googleusercontent.com/XORR9Tb3i3MmeFKyUOmfvROXt2Nq4H_wRSOUaD1VCPJdofM_5Ldxg7LoFvBLik3BBeY" width="40" alt="TikTok"></a>
+          <a href="https://dzen.ru/?utm_referrer=www.google.com"><img src="https://play-lh.googleusercontent.com/hVtkt_Wse2lsLBH1y63QadgGrJY1FTxIshO8kXJDKSJ4vNPfLtfud2npj3pG5vvzwHI=w240-h480-rw" width="40" alt="Instagram"></a>
+          <a href="https://telegram.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Telegram_Messenger.png/500px-Telegram_Messenger.png" width="40" alt="Telegram"></a>
+          
+        </div>
+      </div>
+      
+      
+      <div class="contacts">
+        <p>Контактный номер: <strong>+7 908 148-81-31</strong></p>
+        <p>Электронная почта: <strong>gadkopopa@mail.com</strong></p>
+        <p>Адрес: <strong>г. Магнитошахтинск, ул. Пушкина, д. 3</strong></p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Студия лазерной эпиляции "Гладко"</p>
+        <p>Все права защищены</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
