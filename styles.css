@@ -1,0 +1,248 @@
+/* Тело страницы */
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+/* Заголовок первого уровня */
+h1 {
+  font-size: 2.5em;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+/* Абзацы */
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+/* Списки */
+ul {
+  list-style-type: square;
+  color: #daf0ff;
+  padding-left: 20px;
+}
+.footer {
+  padding: 20px;
+}
+
+.socials img {
+  margin-right: 10px;
+}
+
+.contacts {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  text-align: center;
+}
+
+
+
+.images-center img {
+  display: block;
+}
+.socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 10px 0;
+}
+.images-row {
+  display: flex;
+  justify-content: center;
+  gap: 0px; /* расстояние между изображениями */
+
+}
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* расстояние между текстом и иконками */
+}
+
+.socials {
+  display: flex;
+  gap: 8px; /* расстояние между иконками */
+}
+
+.socials img {
+  vertical-align: middle;
+}
+
+.images-row img {
+  display: block;
+}
+.socials img {
+  display: block;
+}
+/* Ссылки */
+a {
+  color: #c0a634;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+}
+/* Изображения */
+img {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+}
+/* Контейнер страницы */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили для header */
+.header {
+  background-color: #8ba7c7; /*нетрогать это заголовок*/
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Навигация */
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0;
+  background-color:  #8ba7c7;;/*нетрогать это штуки заголовка*/
+  border-radius: 8px;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  background-color: #dabbfd;;  /*нетрогать это фон штук заголовка*/
+}
+
+/* Основной контент и боковая панель с Flexbox */
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Основной текст */
+.main-content section {
+  flex: 3;
+  background-color: #ddecf5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Боковая панель */
+.sidebar {
+  flex: 1;
+  background-color: #0088e2;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #8ba7c7; /* нетрогать это нижняя штука*/
+  color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Псевдоклассы для ссылок */
+a {
+  color: #818181; /* обычный цвет */
+  text-decoration: none; /* без подчеркивания */
+  transition: color 0.3s ease; /* плавное изменение цвета */
+}
+a:hover {
+  color: #3f5cac; /* цвет при наведении */
+  text-decoration: underline; /* подчеркивание при наведении */
+}
+a:active {
+  color: #ee8036; /* цвет при нажатии */
+}
+/* Кнопки */
+button {
+  background-color: #006110;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #e67e22;
+}
+/* Медиазапрос для мобильных устройств (до 600px) */
+@media (max-width: 600px) {
+  /* Верстка main-content столбиком */
+  .main-content {
+    flex-direction: column;
+  }
+  /* Меню с пунктами в колонку */
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav li {
+    margin: 10px 0;
+  }
+}
+/* Медиазапрос для планшетов (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content {
+    flex-direction: row;
+  }
+  .nav ul {
+    justify-content: space-around;
+  }
+}
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contacts {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  text-align: center;
+}
